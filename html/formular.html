@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coora</title>
+        <link rel="icon" href="../img/COORA.png" type="image/x-icon">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../js/script.js"></script>
+    </head>
+    <body style="background-color: rgb(58, 58, 58);">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../img/COORA.only.png" alt="Logo">
+            </a>
+
+            <button class="burger-menu" onclick="toggleMenu()">&#9776;</button>
+
+            <div class="menu" id="navLinks">
+                <div class="hidemenu" id="toggleMenu">
+                    <a href="../index.html">Home</a>
+                    <a href="./About_us.html">About us</a>
+                    <a href="./Projektinformationen.html">Projektinformationen</a>
+                    <a href="../html/formular.html" class="active">Kontakt</a>
+                </div>
+            </div>
+
+            <!-- <div class="burger-menu" onclick="toggleMenu()">☰</div> -->
+
+            <a href="https://www.youtube.com/@loliio5024" class="logo">
+                <img src="../img/white.png" alt="Logo">
+            </a>
+        </div>
+        <br><br><br><br>
+        <div id="formular-container" class="zentriert">
+            <form id="kontaktformular" action="/send_email.php" method="post">
+                <label for="vorname">Vorname</label>
+                <input type="text" id="vorname" name="vorname" required>
+        
+                <label for="nachname">Nachname</label>
+                <input type="text" id="nachname" name="nachname" required>
+        
+                <label for="email">Email-Adresse</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="telefon">Telefonnummer</label>
+                <input type="tel" id="telefon" name="telefon" required>
+        
+                <label for="anliegen">Ihr Anliegen / Ihre Frage</label>
+                <textarea id="anliegen" name="anliegen" rows="4" required></textarea>
+        
+                <button type="submit" id="senden">senden</button>
+            </form>
+        </div>        
+
+        <br><br><br><br>
+
+        <div class="container2" style="width: 100vw; background-color: white; margin: 0; padding: 20px; box-sizing: border-box;">
+            <section class="section1">
+                <h1 class="title1">COORA</h1>
+                <p class="paragraph1">
+                    Unsere App steht kurz vor der Fertigstellung des Minimum Viable Product (MVP), das die wichtigsten Funktionen wie Infohub, Kalender und Playerboard umfasst. Diese Basisfunktionen sollen die Kommunikation und Organisation in Fussballvereinen deutlich verbessern und erste Nutzer von den Vorteilen überzeugen.
+                </p>
+            </section>
+        </div>
+
+        <br><br>
+
+        <div class="container2" style="width: 100vw; background-color: white; margin: 0; padding: 20px; box-sizing: border-box;">
+            <section class="section1">
+                <h1 class="title1">Sponsoring</h1>
+                <p class="paragraph1">
+                    Um die Entwicklung des MVPs und den baldigen Start unserer Pilotphase zu finanzieren, suchen wir gezielt nach Sponsoren. Mit Ihrer Unterstützung können wir sicherstellen, dass unsere Vision Realität wird und den Vereinen eine funktionierende und innovative Lösung zur Verfügung steht. Sponsoren erhalten die Möglichkeit, von Beginn an Teil eines zukunftsweisenden Projekts zu sein und ihre Marke in einem dynamischen, sportlichen Umfeld zu präsentieren.
+                </p>
+            </section>
+        </div>
+        
+        <br><br><br><br>
+
+        <script src="../js/script.js"></script>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section logo-section">
+                    <img src="../img/COORA.png" alt="Cooraimg">
+                    <p>© Coora</p>
+                </div>
+                <div class="footer-section links-section">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../html/About_us.html">About us</a></li>
+                        <li><a href="../html/Projektinformationen.html">Projektinformationen</a></li>
+                        <li><a href="../html/formular.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social-section">
+                    <ul>
+                        <li><a href="./Impressum.html">Impressum</a></li>
+                        <li><a href="./Datenschutzerklärung.html">Datenschutz</a></li>
+                    </ul>
+                    <a href="https://www.instagram.com/coora.app/" target="_blank">
+                        <img src="../img/Instagram_icon.png" alt="Instagram Icon" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </footer>
+        
+    </body>
+</html>

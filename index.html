@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coora</title>
+        <link rel="icon" href="./img/COORA.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/styles.css">
+        <script src="./js/script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="./img/COORA.only.png" alt="Logo">
+            </a>
+
+            <button class="burger-menu" onclick="toggleMenu()">&#9776;</button>
+
+            <div class="menu" id="navLinks">
+                <div class="hidemenu" id="toggleMenu">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="./html/About_us.html">About us</a>
+                    <a href="./html/Projektinformationen.html">Projektinformationen</a>
+                    <a href="./html/formular.html">Kontakt</a>
+                </div>
+            </div>
+
+            <!-- <div class="burger-menu" onclick="toggleMenu()">☰</div> -->
+
+            <a href="https://www.youtube.com/@loliio5024" class="logo">
+                <img src="../img/white.png" alt="Logo">
+            </a>
+        </div>
+
+        <section class="hero">
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="./img/vid_coora.mp4" type="video/mp4">
+                Ihr Browser unterstützt kein HTML5-Video.
+            </video>
+            <div class="hero-overlay"></div> <!-- Verdunkelungs-Overlay -->
+            <div class="hero-text">
+                <h1>Coora<br>Die App für Fussballvereine</h1> <br>
+                <a href="./html/Download.html">
+                    <button class="download-button" style="
+                        padding: 12px 24px;
+                        font-size: 16px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease, transform 0.3s ease;
+                    ">Download</button>
+                </a>
+            </div>
+        </section>
+        
+        <style>
+            .download-button:hover {
+                background-color: #0056b3;
+                transform: translateY(-2px);
+            }
+        
+            .download-button:active {
+                transform: translateY(1px);
+            }
+        </style>
+             
+        
+        <br><br>
+
+        <div class="spacer">
+            <div class="subscription-container">
+                <div class="subscription-box">
+                  <h2>Basic Plan</h2>
+                  <p>Perfekt für Juniorenteams</p>
+                  <p class="price">CHF 1.-/Monat</p>
+                  <p class="sternangabe">*Preis pro Spieler</p>
+                  <button>Jetzt abonnieren</button>
+                </div>
+                <div class="subscription-box">
+                  <h2>Premium Plan</h2>
+                  <p>Perfekt für professionelle und <br> Semiprofessionelle Teams</p>
+                  <p class="price">CHF 2.-/Monat</p>
+                  <p class="sternangabe">*Preis pro Spieler</p>
+                  <button>Jetzt abonnieren</button>
+                </div>
+            </div>
+        </div> <!-- Abstand für Scrollen -->
+
+        <br><br>
+
+        <div class="image-container">
+            <img src="./img/fbp_coora.jpg" alt="Revealed Image">
+        </div>
+
+        <script src="./js/script.js"></script>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section logo-section">
+                    <img src="./img/COORA.png" alt="Cooraimg">
+                    <p>© Coora</p>
+                </div>
+                <div class="footer-section links-section">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="./html/About_us.html">About us</a></li>
+                        <li><a href="./html/Projektinformationen.html">Projektinformationen</a></li>
+                        <li><a href="./html/formular.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social-section">
+                    <ul>
+                        <li><a href="./html/Impressum.html">Impressum</a></li>
+                        <li><a href="./html/Datenschutzerklärung.html">Datenschutz</a></li>
+                    </ul>
+                    <a href="https://www.instagram.com/coora.app/" target="_blank">
+                        <img src="./img/Instagram_icon.png" alt="Instagram Icon" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </footer>
+        
+    </body>
+</html>
+
+
+<!--Access token: glpat-g5xXo4hQhLSnhSW_E-TF -->
