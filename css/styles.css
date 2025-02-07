@@ -303,23 +303,26 @@ body {
 
 
 #formular-container {
-    background-color: rgb(175, 175, 175);
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 2rem;
     width: 100%;
     max-width: 500px;
-    margin: 0 auto; /* Zentriert das Formular horizontal */
-
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #kontaktformular {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 1.2rem;
 }
 
 #kontaktformular label {
-    margin-top: 10px;
-    font-size: 1em;
+    color: #374151;
+    font-weight: 500;
+    font-size: 0.95rem;
 }
 
 #kontaktformular input[type="text"],
@@ -327,49 +330,53 @@ body {
 #kontaktformular input[type="tel"],
 #kontaktformular textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background-color: #f9fafb;
+}
+
+#kontaktformular textarea {
+    max-height: 200px;
+    min-height: 100px;
+    resize: vertical;
+}
+
+#kontaktformular input:focus,
+#kontaktformular textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 #senden {
-    background-color: grey;
+    background-color: #3b82f6;
     color: white;
     border: none;
-    padding: 10px;
-    font-size: 1em;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
+    transition: background-color 0.2s;
 }
 
 #senden:hover {
-    background-color: #329e93;
+    background-color: #2563eb;
 }
 
 @media (max-width: 768px) {
     #formular-container {
-        padding: 10px;
+        padding: 1.5rem;
+        margin: 1rem;
+        width: auto;
     }
-
-    #kontaktformular label {
-        font-size: 0.9em;
-    }
-
-    #kontaktformular input[type="text"],
-    #kontaktformular input[type="email"],
-    #kontaktformular input[type="tel"],
+    
+    #kontaktformular input,
     #kontaktformular textarea {
-        font-size: 0.9em;
-        padding: 8px;
-    }
-
-    #senden {
-        font-size: 0.9em;
-        padding: 8px;
+        padding: 0.6rem;
     }
 }
 
