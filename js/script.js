@@ -14,17 +14,20 @@ window.addEventListener('scroll', () => {
     }
 });
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+// Überprüfe, ob `observer` bereits deklariert wurde
+if (typeof observer === 'undefined') {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
     });
-});
 
-document.querySelectorAll('.slide-in').forEach((element) => {
-    observer.observe(element);
-});
+    document.querySelectorAll('.slide-in').forEach((element) => {
+        observer.observe(element);
+    });
+}
 
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("show");
