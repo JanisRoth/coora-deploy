@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Impressum - coora.app</title>
+        <link rel="icon" href="../img/COORA.png" type="image/x-icon">
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -35,27 +36,47 @@
                 text-decoration: underline;
             }
             .back-button {
-                display: inline-block;
-                padding: 10px 20px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 12px 24px;
                 background-color: #007bff;
                 color: #fff;
                 text-decoration: none;
-                border-radius: 5px;
+                border-radius: 8px;
                 font-size: 16px;
-                margin: 10px 0;
-                position: absolute;
-                top: 20px;
-                left: 20px;
+                margin: 16px;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                min-width: 120px;
             }
 
             .back-button:hover {
                 background-color: #0056b3;
+                transform: translateY(-1px);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+            }
+
+            @media (max-width: 768px) {
+                .back-button {
+                    padding: 14px 28px;
+                    font-size: 18px;
+                    margin: 20px;
+                    min-width: 140px;
+                }
+                
+                .container {
+                    margin: 10px;
+                    padding: 15px;
+                }
             }
         </style>
     </head>
     <body>
         <a href="../index.html" class="back-button">Zurück</a>
         <div class="container">
+            <!-- Rest of the content remains the same -->
             <h1>Impressum</h1>
             <p><strong>Angaben gemäss den rechtlichen Anforderungen in der Schweiz:</strong></p>
             <p><strong>Verantwortlich für den Inhalt dieser Website:</strong><br>

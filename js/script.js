@@ -13,3 +13,19 @@ window.addEventListener('scroll', () => {
         container.classList.remove('revealed');
     }
 });
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+});
+
+document.querySelectorAll('.slide-in').forEach((element) => {
+    observer.observe(element);
+});
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+}

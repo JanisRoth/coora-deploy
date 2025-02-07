@@ -6,7 +6,7 @@
         <title>Coora</title>
         <link rel="icon" href="./img/COORA.png" type="image/x-icon">
         <link rel="stylesheet" href="./css/styles.css">
-        <script src="./js/script.js"></script>
+        <script src="./js/script.js" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -26,9 +26,7 @@
                 </div>
             </div>
 
-            <!-- <div class="burger-menu" onclick="toggleMenu()">☰</div> -->
-
-            <a href="https://www.youtube.com/@loliio5024" class="logo">
+            <a href="https://www.youtube.com/@loliio5024" class="logo" id="loliio5024">
                 <img src="../img/white.png" alt="Logo">
             </a>
         </div>
@@ -79,7 +77,7 @@
                   <p class="sternangabe">*Preis pro Spieler</p>
                   <button>Jetzt abonnieren</button>
                 </div>
-                <div class="subscription-box">
+                <div class="subscription-box" id="sb2">
                   <h2>Premium Plan</h2>
                   <p>Perfekt für professionelle und <br> Semiprofessionelle Teams</p>
                   <p class="price">CHF 2.-/Monat</p>
@@ -91,9 +89,17 @@
 
         <br><br>
 
-        <div class="image-container">
-            <img src="./img/fbp_coora.jpg" alt="Revealed Image">
+        <div class="quote-container visible">
+            <blockquote class="quote-text">
+              We don't create something new we create something better.
+            </blockquote>
+            <div class="quote-label">#makethechange</div>
         </div>
+
+
+        <!-- <div class="image-container">
+            <img src="./img/fbp_coora.jpg" alt="Revealed Image">
+        </div> -->
 
         <script src="./js/script.js"></script>
 

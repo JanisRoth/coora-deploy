@@ -97,42 +97,72 @@ body {
 
 .burger-menu {
     display: none;
-    font-size: 24px;
+    font-size: 28px;
     background: none;
     border: none;
     color: black;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 100;
 }
 
 @media (max-width: 601px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    #loliio5024 {
+        width: 10px;
+        height: 10px;
+    }
 
     .menu {
-        display: none; 
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Links werden zentriert */
+        justify-content: center; /* Falls nötig für vertikale Zentrierung */
+        position: absolute;
+        top: 60px;
+        left: 0;
         width: 100%;
-    }
-
-    .hidemenu {
-        display: none;
-    }
-
-    .burger-menu {
-        display: block; 
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
     }
 
     .menu.show {
-        display: flex; 
+        max-height: 400px;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .menu a {
-        margin: 10px 0; 
+        padding: 15px;
+        text-align: center; /* Links zentrieren */
+        width: 100%; /* Volle Breite */
+        display: block; /* Sicherstellen, dass sie untereinander sind */
+        border-bottom: 1px solid #ddd;
     }
 
-    .cta-button .button {
-        display: none;
+    /* Balken am unteren Rand */
+    .menu::after {
+        content: "";
+        display: block;
+        height: 4px;
+        background-color: black;
+        width: 100%;
     }
 }
+
 
 .cta-button {
     margin-top: 20px;
@@ -272,6 +302,21 @@ body {
     margin: 0 auto; /* Zentrierung */
 }
 
+.subscription-box button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 28px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+ }
+ 
+ .subscription-box button:hover {
+    background-color: #1d4ed8;
+ }
+
 .subscription-box {
     flex: 1;
     background-color: #ffffff;
@@ -298,6 +343,10 @@ body {
     .subscription-box {
         width: 90%; /* Fast volle Breite auf kleinen Screens */
         max-width: 400px;
+    }
+
+    #sb2 {
+        display: none;
     }
 }
 
@@ -494,3 +543,59 @@ body {
     }
 }
 
+
+.quote-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s ease-out;
+}
+
+.slide-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.quote-text {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.quote-text::before {
+    content: '"';
+    font-size: 4rem;
+    color: #e0e0e0;
+    position: absolute;
+    left: -2rem;
+    top: -1rem;
+}
+
+.quote-label {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .quote-container {
+        padding: 1.5rem;
+        margin: 2rem auto;
+    }
+
+    .quote-text {
+        font-size: 1.8rem;
+    }
+}
