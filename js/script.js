@@ -1,33 +1,28 @@
-// Füge den Scroll-Event-Listener hinzu
-window.addEventListener('scroll', () => {
-    const container = document.querySelector('.image-container');
-    const containerPosition = container.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-  
-    // Überprüfen, ob der Container im sichtbaren Bereich liegt
-    if (containerPosition < windowHeight && containerPosition > -container.offsetHeight) {
-        container.classList.add('revealed');
-        container.classList.remove('hidden');
-    } else if (containerPosition > windowHeight || containerPosition < -container.offsetHeight) {
-        container.classList.add('hidden');
-        container.classList.remove('revealed');
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    const moveable = document.querySelector('.moveable');
+    let followMouse = true;
+    
+    if (!moveable) return;
+
+    document.addEventListener('keydown', (event) => {
+        if (event.code === 'Space') {
+            // Bewege das Objekt zu einer zufälligen Position
+            const randomX = Math.random() * window.innerWidth;
+            const randomY = Math.random() * window.innerHeight;
+            moveable.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        } else if (event.code === 'KeyP') {
+            // Bewege das Objekt zu einer festen Position und stoppe Mausverfolgung
+            moveable.style.transform = 'translate(1000px, 200px)';
+            followMouse = false;
+        }
+    });
+
+    document.addEventListener('mousemove', (event) => {
+        if (followMouse) {
+            moveable.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
+        }
+    });
 });
-
-// Überprüfe, ob `observer` bereits deklariert wurde
-if (typeof observer === 'undefined') {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    });
-
-    document.querySelectorAll('.slide-in').forEach((element) => {
-        observer.observe(element);
-    });
-}
 
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("show");

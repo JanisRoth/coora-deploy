@@ -72,14 +72,19 @@ body {
     padding: 20px;
     font-family: 'Roboto', sans-serif;
     border-bottom: 1px solid black;
+    position: relative;
 }
 
 .logo img {
     height: 50px;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .menu {
     display: flex;
+    z-index: 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+    align-items: center;
 }
 
 .menu a {
@@ -125,12 +130,15 @@ body {
     .menu {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Links werden zentriert */
-        justify-content: center; /* Falls nötig für vertikale Zentrierung */
+        align-items: center;
+        justify-content: center;
         position: absolute;
         top: 60px;
-        left: 0;
         width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
         background-color: white;
         max-height: 0;
         overflow: hidden;
@@ -147,17 +155,16 @@ body {
 
     .menu a {
         padding: 15px;
-        text-align: center; /* Links zentrieren */
-        width: 100%; /* Volle Breite */
-        display: block; /* Sicherstellen, dass sie untereinander sind */
+        text-align: center;
+        width: 100%;
+        display: block;
         border-bottom: 1px solid #ddd;
     }
 
-    /* Balken am unteren Rand */
     .menu::after {
         content: "";
         display: block;
-        height: 4px;
+        height: 2px;
         background-color: black;
         width: 100%;
     }
@@ -620,3 +627,6 @@ body {
     transform: translateY(1px);
 }
 
+.hero-overlay {
+    pointer-events: none;
+}
